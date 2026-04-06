@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app.models.record import Record
 
-router = APIRouter()
+router = APIRouter(prefix="/dashboard", tags=["Dashboard"])
 
 def get_db():
     db = SessionLocal()

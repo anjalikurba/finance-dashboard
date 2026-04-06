@@ -4,7 +4,7 @@ from app.database import SessionLocal
 from app.models.user import User
 from app.schemas.user import UserCreate
 
-router = APIRouter()
+router = APIRouter(prefix="/users", tags=["Users"])
 
 def get_db():
     db = SessionLocal()

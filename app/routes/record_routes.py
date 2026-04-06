@@ -4,7 +4,7 @@ from app.database import SessionLocal
 from app.models.record import Record
 from app.schemas.record import RecordCreate
 
-router = APIRouter()
+router = APIRouter(prefix="/records", tags=["Records"])
 
 def get_db():
     db = SessionLocal()
